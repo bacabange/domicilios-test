@@ -1,0 +1,43 @@
+@import '../../shared/variables/index.scss';
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: $white;
+    padding: $padding;
+    border-bottom: $borderFineSize solid $whiteContrast;
+}
+
+.item {
+    flex-grow: 1;
+}
+
+.rightContent {
+    // border: solid 1px blue;
+    flex-grow: 1;
+    text-align: right;
+
+    @media only screen and (max-width : $sizeXs) {
+        display: none;
+    }
+}
+
+.leftContent {
+    // border: 1px solid red;
+    text-align: left;
+    flex-grow: 1;
+
+    @media only screen and (max-width : $sizeXs) {
+        display: none;
+    }
+}
+
+.title {
+    // border: solid 1px green;
+    flex-grow: 3;
+    font-size: 18px;
+    text-align: center;
+    align-self: center;
+    font-weight: bold;
+}
