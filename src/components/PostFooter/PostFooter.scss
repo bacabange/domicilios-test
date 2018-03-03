@@ -33,6 +33,7 @@
         align-items: center;
 
         .item {
+            cursor: pointer;
             .blue {
                 @extend .reaction;
 
@@ -67,6 +68,7 @@
         @extend .postFooter;
 
         border-top: none;
+        border-bottom: solid 2px $colorBorderTextBox;
         display: flex;
         flex-direction: row;
 

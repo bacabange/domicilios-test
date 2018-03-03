@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import PostFooter from '../PostFooter/PostFooter';
+import PostComments from '../PostComments/PostComments';
 
 import styles from './Post.scss';
 import profileImage from '../../assets/images/profile.jpg';
@@ -15,7 +16,7 @@ class Post extends Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.mainPost}>
                 <div className={styles.container}>
                     <div className={styles.profileImage}>
                         <img src={profileImage} alt="Profile"/>
@@ -29,6 +30,7 @@ class Post extends Component {
                 </div>
 
                 <PostFooter />
+                <PostComments />
             </div>
         )
     }

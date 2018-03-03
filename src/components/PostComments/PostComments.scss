@@ -1,0 +1,12 @@
+@import '../../shared/variables/index.scss';
+
+.container {
+    background: $whiteBackground;
+    padding: 16px 10px 10px 10px;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px $colorBorderTextBox;
+    border-top: none;
+}

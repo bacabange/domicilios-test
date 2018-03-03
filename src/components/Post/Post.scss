@@ -1,5 +1,10 @@
 @import '../../shared/variables/index.scss';
 
+.mainPost {
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+    border-radius: $borderRadius;
+}
+
 .container {
     background: $white;
     padding: $padding 10px 10px 10px;
@@ -21,6 +26,7 @@
 
     .postDetail {
         padding-left: 16px;
+        width: 100%;
         h2 {
             color: $green;
             margin: 0;
