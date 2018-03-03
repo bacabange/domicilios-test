@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Post.scss';
+import PostFooter from '../PostFooter/PostFooter';
 
+import styles from './Post.scss';
 import profileImage from '../../assets/images/profile.jpg';
 
 class Post extends Component {
@@ -26,6 +27,8 @@ class Post extends Component {
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique architecto, sint fugit eos, unde accusamus aspernatur ex fugiat suscipit voluptatibus repellat</p>
                     </div>
                 </div>
+
+                <PostFooter />
             </div>
         )
     }
