@@ -7,17 +7,6 @@
     color: $green;
     position: relative;
     font-family: 'Open Sans', sans-serif;
-
-    p {
-        margin: 0;
-    }
-}
-
-.container__close {
-    @extend .container;
-
-    padding: $padding;
-    cursor: pointer;
 }
 
 .container__open {

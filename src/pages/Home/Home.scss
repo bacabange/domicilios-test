@@ -3,6 +3,11 @@
 .container {
     padding: $padding;
     width: 100%;
+
+    @media only screen and (min-width : 992px) {
+        width: 960px;
+        margin: auto;
+    }
 }
 
 .posts {

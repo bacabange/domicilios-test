@@ -14,12 +14,16 @@ class Post extends Component {
         this.state = { }
     }
 
+    openReactionModal( ){
+        console.log('Open Modal');
+    }
+
     render() {
         return (
-            <div className={styles.mainPost}>
-                <div className={styles.container}>
-                    <div className={styles.profileImage}>
-                        <img src={profileImage} alt="Profile"/>
+            <div className={ styles.mainPost }>
+                <div className={ styles.container }>
+                    <div className={ styles.profileImage }>
+                        <img src={ profileImage } alt="Profile"/>
                     </div>
 
                     <div className={styles.postDetail}>
@@ -29,7 +33,7 @@ class Post extends Component {
                     </div>
                 </div>
 
-                <PostFooter />
+                <PostFooter click={ this.openReactionModal } />
                 <PostComments />
             </div>
         )

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styles from './TextBox.scss';
 
 import Button from '../Button/Button';
+import Modal from '../Modal/Modal';
 
 class TextBox extends Component {
     constructor(props) {
@@ -10,15 +11,16 @@ class TextBox extends Component {
             isOpenOverlay: false
          }
 
-        this.openTextarea = this.openTextarea.bind(this);
+        this.toogleModal = this.toogleModal.bind(this);
     }
 
-    openTextarea = () => {
+    toogleModal = () => {
+        console.log('Toogle hp');
         let isOpenOverlay = this.state.isOpenOverlay;
 
         this.setState({
             isOpenOverlay: !isOpenOverlay
-        })
+        });
     }
 
     savePost = () => {
@@ -26,24 +28,18 @@ class TextBox extends Component {
     }
 
     render() {
-        const overleyVsibility = this.state.isOpenOverlay ? {display: 'block'} : {display: 'none'};
         const inputVsibility = this.state.isOpenOverlay ? {zIndex: '99999'} : {zIndex: '1'};
 
         return (
             <div>
                 {
                     this.state.isOpenOverlay ?
-                        <div className={ styles.container__open } style={ inputVsibility }>
-                            <textarea name="post" id="post" className={styles.input} placeholder="Escribe aquí tu post"></textarea>
-
-                            <Button title="Publicar" type="primary" widthParent="block" click={ this.savePost } />
-                        </div>
+                        <Modal click={ this.toogleModal } visible={ this.state.isOpenOverlay } />
                     :
-                        <div className={ styles.container__close } onClick={ this.openTextarea } style={ inputVsibility }>
+                        <div className={ styles.container__close } onClick={ this.toogleModal } style={ inputVsibility }>
                             <p>Escribe aquí tu post</p>
                         </div>
                 }
-                <div className={ styles.overlay } onClick={ this.openTextarea } style={ overleyVsibility }></div>
             </div>
         )
     }

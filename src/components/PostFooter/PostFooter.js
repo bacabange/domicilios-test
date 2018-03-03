@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './PostFooter.scss';
 
@@ -14,7 +15,7 @@ class PostFooter extends Component {
             <div>
                 <div className={ styles.container }>
                     <div className={ styles.toolbar }>
-                        <div className={ styles.item }>
+                        <div className={ styles.item } onClick={ this.props.click }>
                             <span className={ styles.blue }></span>
                             <span className={ styles.red }></span>
                             <span className={ styles.yellow }></span>
@@ -32,6 +33,13 @@ class PostFooter extends Component {
             </div>
         )
     }
+}
+
+
+PostFooter.propTypes = {
+    // title: PropTypes.string.isRequired,
+    // type: PropTypes.string.isRequired,
+    click: PropTypes.func.isRequired
 }
 
 export default PostFooter;
