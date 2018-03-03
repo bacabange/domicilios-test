@@ -1,0 +1,33 @@
+@import '../../shared/variables/index.scss';
+
+.container {
+    background: $white;
+    padding: $padding 10px 10px 10px;
+    border-top-left-radius: $borderRadius;
+    border-top-right-radius: $borderRadius;
+    display: flex;
+    flex-direction: row;
+
+    .profileImage {
+        width: 50px;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    .postDetail {
+        padding-left: 16px;
+        h2 {
+            color: $green;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        span {
+            color: $gray;
+            font-size: 14px;
+        }
+    }
+}

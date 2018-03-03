@@ -36,7 +36,7 @@ class TextBox extends Component {
                         <div className={ styles.container__open } style={ inputVsibility }>
                             <textarea name="post" id="post" className={styles.input} placeholder="Escribe aquí tu post"></textarea>
 
-                            <Button type="primary" widthParent="block" click={ this.savePost } />
+                            <Button title="Publicar" type="primary" widthParent="block" click={ this.savePost } />
                         </div>
                     :
                         <div className={ styles.container__close } onClick={ this.openTextarea } style={ inputVsibility }>

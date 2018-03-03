@@ -18,13 +18,14 @@ class Button extends Component {
 
         return (
             <div>
-                <button className={ classes.join(' ') } onClick={ this.props.click }>Hola puto</button>
+                <button className={ classes.join(' ') } onClick={ this.props.click }>{this.props.title}</button>
             </div>
         )
     }
 }
 
 Button.propTypes = {
+    title: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
     click: PropTypes.func.isRequired
 }
