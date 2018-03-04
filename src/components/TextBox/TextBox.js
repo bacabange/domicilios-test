@@ -15,7 +15,6 @@ class TextBox extends Component {
     }
 
     toogleModal = () => {
-        console.log('Toogle hp');
         let isOpenOverlay = this.state.isOpenOverlay;
 
         this.setState({

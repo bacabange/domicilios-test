@@ -18,7 +18,7 @@ class Modal extends Component {
         let isOpenOverlay = this.state.isOpen;
 
         this.setState({
-            isOpen: !isOpenOverlay
+            isOpen: ! isOpenOverlay
         });
 
         this.props.click();
@@ -47,7 +47,8 @@ class Modal extends Component {
 
 Modal.propTypes = {
     visible: PropTypes.bool.isRequired,
-    click: PropTypes.func.isRequired
+    click: PropTypes.func.isRequired,
+    type: PropTypes.string
 }
 
 export default Modal;
