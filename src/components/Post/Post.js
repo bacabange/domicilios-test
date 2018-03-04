@@ -48,7 +48,7 @@ class Post extends Component {
 
                 <PostFooter click={ this.toggleReactionModal } />
 
-                <PostComments />
+                <PostComments comments={this.props.post.comments} />
             </div>
         )
     }

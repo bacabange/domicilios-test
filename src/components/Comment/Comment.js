@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import styles from './Comment.scss';
 
@@ -11,6 +12,9 @@ class Comment extends Component {
     }
 
     render() {
+        const now = moment();
+        const date = moment.unix(this.props.date).format("YYYY-MM-DD");
+
         return (
             <div className={ styles.container }>
                 <div className={styles.profileImage}>
@@ -22,7 +26,7 @@ class Comment extends Component {
                         <span className={styles.title}>{this.props.name}</span>
                         { this.props.comment }
                     </div>
-                    <span className={styles.time}>Hace 3min</span>
+                    <span className={styles.time}>{ now.diff(date, 'minutes') } Minutes</span>
                 </div>
             </div>
         )
@@ -32,7 +36,8 @@ class Comment extends Component {
 Comment.propTypes = {
     name: PropTypes.string.isRequired,
     imageProfile: PropTypes.string.isRequired,
-    comment: PropTypes.string.isRequired
+    comment: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired
 }
 
 export default Comment;

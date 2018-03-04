@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Comment from '../Comment/Comment';
 
@@ -13,17 +14,25 @@ class PostComments extends Component {
     }
 
     render() {
+        const comments = this.props.comments.map((value, index) => {
+            return(
+                <Comment key={index} name={value.user.name} imageProfile={profileImage} comment={value.text} date={value.date} />
+            );
+        });
+
         return (
             <div className={ styles.container }>
-                <Comment name="Stiven" imageProfile={profileImage} comment="Lorem ipsum dolor" />
-                <Comment name="Juan" imageProfile={profileImage} comment="Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
-                <Comment name="Karen" imageProfile={profileImage} comment="Lorem ipsum dolor, kewm asjnf wert." />
-
+                {comments}
                 <textarea className={styles.input} placeholder="Escribe tu comentario"></textarea>
             </div>
         )
     }
 }
 
+PostComments.propTypes = {
+    comments: PropTypes.array.isRequired,
+    // type: PropTypes.string.isRequired,
+    // click: PropTypes.func.isRequired
+}
 
 export default PostComments;
