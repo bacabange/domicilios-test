@@ -30,8 +30,6 @@ class Post extends Component {
         const now = moment();
         const date = moment.unix(this.props.post.date).format("YYYY-MM-DD");
 
-        console.log(this.props.post);
-
         return (
             <div className={ styles.mainPost }>
                 <div className={ styles.container }>

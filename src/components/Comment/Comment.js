@@ -37,7 +37,7 @@ Comment.propTypes = {
     name: PropTypes.string.isRequired,
     imageProfile: PropTypes.string.isRequired,
     comment: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired
+    date: PropTypes.number.isRequired
 }
 
 export default Comment;
